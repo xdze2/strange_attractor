@@ -1,7 +1,7 @@
 # Thomas' cyclically symmetric attractor
 
 
-![animated_attractor](./animated_attractor.gif)
+![animated_attractor](./dynamic_images.gif)
 
 
 

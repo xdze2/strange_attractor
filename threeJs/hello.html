@@ -1,0 +1,208 @@
+<html>
+<head>
+    <title>Hello 3d</title>
+    <style>
+        body { margin: 0; }
+        canvas { width: 800px; height: 200px; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script src="js/three.min.js"></script>
+<script>
+    'use strict';
+
+    // Renderer
+    const canvas = document.querySelector('#canvas');
+    const renderer = new THREE.WebGLRenderer({canvas});
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+    // Camera
+    const fov = 75;
+    const aspect = 2;  // the canvas default
+    const near = 0.1;
+    const far = 15;
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.z = 10;
+        //var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+    // Scene
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0x777777 );
+    
+    // Some ligth
+    {
+    const color = 0xFFFFFF;
+    const intensity = 1;
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(-1, 2, 4);
+    scene.add(light);
+    }
+    
+    // Geometry
+    const geometry = new THREE.BoxGeometry(.2, .1, .5);
+
+    function makeInstance(geometry, color, x_start) {
+        const material = new THREE.MeshPhongMaterial({color});
+
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        cube.position.x = x_start;
+
+        return cube;
+    }
+    
+    const cubes = [
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+
+     makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x44aa88,  Math.random()),
+        makeInstance(geometry, 0x8844aa, -2),
+        makeInstance(geometry, 0xaa8844,  2),
+        makeInstance(geometry, 0x440088,  1),
+        makeInstance(geometry, 0x8844aa, -2.9),
+        makeInstance(geometry, 0xaa8844,  2.1),
+        makeInstance(geometry, 0x440088,  1.4),
+        
+    ];
+
+    function render(time) {
+        time *= 0.001;  // convert time to seconds
+        //console.log('time', time)
+        cubes.forEach((cube, ndx) => {
+            const speed = 1 + ndx * .1;
+            const rot = time * speed;
+            
+            const dt = .03;
+            const f1 = dXdt(cube.position.x, cube.position.y, cube.position.z)
+            const f2 = dXdt(cube.position.x + dt/2*f1[0],
+                            cube.position.y + dt/2*f1[1],
+                            cube.position.z + dt/2*f1[2])
+            cube.position.x += f2[0]*dt;
+            cube.position.y += f2[1]*dt;
+            cube.position.z += f2[2]*dt;
+
+            cube.up = new THREE.Vector3(...dX2dt(cube.position.x,
+                                                 cube.position.y,
+                                                 cube.position.z, ...f2))
+            cube.lookAt(cube.position.x + 10*dt*f2[0],
+                        cube.position.y + 10*dt*f2[1],
+                        cube.position.z + 10*dt*f2[2],
+            );
+            //console.log(cube.position)
+            
+        });
+
+        renderer.render(scene, camera);
+
+        requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+
+    // Physics
+    const b = 0.19
+    function dXdt(x, y, z) {
+        const dot_x = Math.sin(y) - b*x
+        const dot_y = Math.sin(z) - b*y
+        const dot_z = Math.sin(x) - b*z
+        const v = [dot_x, dot_y, dot_z]
+        return v;
+    };
+    function dX2dt(x, y, z, dx, dy, dz) {
+        const u = Math.cos(y)*dy - b*dx
+        const v = Math.cos(z)*dz - b*dy
+        const w = Math.cos(x)*dx - b*dz
+        return [-u, -v, -w]
+    }
+
+
+</script>
+</html>
