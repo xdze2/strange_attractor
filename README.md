@@ -26,12 +26,17 @@ A simple equation, with only one parameter `b`:
 
 ## Notebooks 
 
-- [test numba and optimization](./test_numba.ipynb)
+- [Test numba and optimization](./test_numba.ipynb)
 - [ODE solver test](./which_solver.ipynb)
-- [what value for coefficient b](./route_to_chaos.ipynb):
+- [What value for coefficient b](./route_to_chaos.ipynb):
 
 ![max of x vs b](./route_to_chaos_fig1.png)
 
 Zoom:
 
 ![max of x vs b](./route_to_chaos_fig1_zoom.png)
+
+
+- [To 3D and beyond](./to_3D_and_beyond.ipynb)
+
+![potree_v3_1000px_interior](./potree_v3_1000px_interior.png)
