@@ -1,0 +1,3 @@
+[submodule "chaotic-clouds"]
+	path = chaotic-clouds
+	url = git@github.com:xdze2/chaotic-clouds.git
