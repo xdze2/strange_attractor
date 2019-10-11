@@ -4,6 +4,9 @@
 ![animated_attractor](./dynamic_images.gif)
 
 
+3D intaractive clouds using Potree: https://xdze2.github.io/chaotic-clouds/
+
+
 ## Links and references 
 
 - [http://rreusser.github.io](http://rreusser.github.io/strange-attractors/#thomas) Splendide visualization of different attractors using WebGL
@@ -40,3 +43,5 @@ Zoom:
 - [To 3D and beyond](./to_3D_and_beyond.ipynb)
 
 ![potree_v3_1000px_interior](./potree_v3_1000px_interior.png)
+
+- [A simple working version in Julia!](./Lorenz_Julia.ipynb)
