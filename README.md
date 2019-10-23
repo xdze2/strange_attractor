@@ -4,7 +4,7 @@
 ![animated_attractor](./images/dynamic_images.gif)
 
 
-3D intaractive clouds using Potree: https://xdze2.github.io/chaotic-clouds/
+--> 3D interactive clouds using Potree: https://xdze2.github.io/chaotic-clouds/
 
 
 ## Links and references 
